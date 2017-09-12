@@ -16,13 +16,13 @@ if [[ $# -lt 1 ]] || [[ ! "$1" == "java"* ]]; then
      -Dserver.host=0.0.0.0 \
      -Dserver.port=$AIRSONIC_PORT \
      -Dserver.contextPath=$CONTEXT_PATH \
-     -Dairsonic.home=$AIRSONIC_DIR/data \
-     -Dairsonic.defaultMusicFolder=$AIRSONIC_DIR/music \
-     -Dairsonic.defaultPodcastFolder=$AIRSONIC_DIR/podcasts \
-     -Dairsonic.defaultPlaylistFolder=$AIRSONIC_DIR/playlists \
+     -Dminisonic.home=$AIRSONIC_DIR/data \
+     -Dminisonic.defaultMusicFolder=$AIRSONIC_DIR/music \
+     -Dminisonic.defaultPodcastFolder=$AIRSONIC_DIR/podcasts \
+     -Dminisonic.defaultPlaylistFolder=$AIRSONIC_DIR/playlists \
      -Djava.awt.headless=true \
      "${java_opts_array[@]}" \
-     -jar airsonic.war "$@"
+     -jar minisonic.war "$@"
 fi
 
 exec "$@"

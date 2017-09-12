@@ -1,0 +1,26 @@
+[Unit]
+Description=Minisonic Media Server
+After=remote-fs.target network.target
+AssertPathExists=/var/minisonic
+
+[Service]
+Type=simple
+Environment="JAVA_JAR=/var/minisonic/minisonic.war"
+Environment="JAVA_OPTS=-Xmx700m"
+Environment="AIRSONIC_HOME=/var/minisonic"
+Environment="PORT=8080"
+Environment="CONTEXT_PATH=/minisonic"
+Environment="JAVA_ARGS="
+EnvironmentFile=-/etc/sysconfig/minisonic
+ExecStart=/usr/bin/java \
+          $JAVA_OPTS \
+          -Dminisonic.home=${AIRSONIC_HOME} \
+          -Dserver.context-path=${CONTEXT_PATH} \
+          -Dserver.port=${PORT} \
+          -jar ${JAVA_JAR} $JAVA_ARGS
+User=minisonic
+Group=minisonic
+
+[Install]
+WantedBy=multi-user.target
+

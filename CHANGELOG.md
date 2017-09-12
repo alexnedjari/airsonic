@@ -1,16 +1,16 @@
 <!--
 # CHANGELOG.md
-# airsonic/airsonic
+# minisonic/minisonic
 # -->
 
 v10.0.0
 -------
 
-  * Rebranded to Airsonic
+  * Rebranded to Minisonic
   * Replaced JWplayer with MediaElement.js (HTML5 player)
-  * Upgraded to Subsonic API version 1.15
+  * Upgraded to Minisonic API version 1.15
   * Added official Docker image
-  * Added Airsonic to a Translation service (Weblate)
+  * Added Minisonic to a Translation service (Weblate)
   * Some translations updates (English, French, German, and Russian)
   * New login page
   * Added additional war with builtin support for external databases
@@ -49,9 +49,9 @@ v6.2.beta1
 
   * Add external database support
   * Upgrade to new version of Spring
-  * Replace subsonic-booter with Spring Boot
+  * Replace minisonic-booter with Spring Boot
   * Remove remote-access service and port-forwarding
-  * Remove vestigial Subsonic licensing calls
+  * Remove vestigial Minisonic licensing calls
   * Add a demo site
   * Tests and bugfixes and documentation, oh my!
 
@@ -77,8 +77,8 @@ v6.1.beta1
 v6.1-alpha1
 -----------
 
-  * Search+replace subsonic-->libresonic
-  * Move out of org.sourceforge.subsonic namespace
+  * Search+replace minisonic-->libresonic
+  * Move out of org.sourceforge.minisonic namespace
   * Develop becomes horribly unstable, you shouldn't be using this.
 
 v6.0.1
@@ -92,4 +92,4 @@ v6.0
 ----
 
   * First release as Libresonic
-  * Based upon Subsonic 5.3(stable)
+  * Based upon Minisonic 5.3(stable)

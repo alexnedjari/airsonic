@@ -1,9 +1,9 @@
 FROM alpine:3.6
 
-LABEL description="Airsonic is a free, web-based media streamer, providing ubiquitious access to your music." \
-      url="https://github.com/airsonic/airsonic"
+LABEL description="Minisonic is a free, web-based media streamer, providing ubiquitious access to your music." \
+      url="https://github.com/minisonic/minisonic"
 
-ENV AIRSONIC_PORT=4040 AIRSONIC_DIR=/airsonic CONTEXT_PATH=/
+ENV AIRSONIC_PORT=4040 AIRSONIC_DIR=/minisonic CONTEXT_PATH=/
 
 WORKDIR $AIRSONIC_DIR
 
@@ -20,7 +20,7 @@ COPY run.sh /usr/local/bin/run.sh
 
 RUN chmod +x /usr/local/bin/run.sh
 
-COPY target/dependency/airsonic-main.war airsonic.war
+COPY target/dependency/minisonic-main.war minisonic.war
 
 EXPOSE $AIRSONIC_PORT
 

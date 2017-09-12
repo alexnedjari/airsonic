@@ -1,0 +1,6 @@
+org.springframework.context.ApplicationListener=\
+  org.minisonic.player.spring.LoggingFileOverrideListener,\
+  org.minisonic.player.security.LoginFailureListener
+
+org.springframework.context.ApplicationContextInitializer=\
+  org.minisonic.player.spring.CustomPropertySourceConfigurer

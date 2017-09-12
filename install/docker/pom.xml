@@ -4,18 +4,18 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <relativePath>../../pom.xml</relativePath>
-        <artifactId>airsonic</artifactId>
+        <artifactId>minisonic</artifactId>
         <version>10.1.0-SNAPSHOT</version>
-        <groupId>org.airsonic.player</groupId>
+        <groupId>org.minisonic.player</groupId>
     </parent>
     <packaging>pom</packaging>
-    <artifactId>airsonic-docker</artifactId>
-    <name>Airsonic Docker Image</name>
+    <artifactId>minisonic-docker</artifactId>
+    <name>Minisonic Docker Image</name>
 
     <dependencies>
         <dependency>
-            <groupId>org.airsonic.player</groupId>
-            <artifactId>airsonic-main</artifactId>
+            <groupId>org.minisonic.player</groupId>
+            <artifactId>minisonic-main</artifactId>
             <version>10.1.0-SNAPSHOT</version>
             <type>war</type>
         </dependency>
@@ -37,7 +37,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>airsonic/airsonic</repository>
+                    <repository>minisonic/minisonic</repository>
                     <tag>${project.version}</tag>
                     <retryCount>0</retryCount>
                 </configuration>
